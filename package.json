@@ -1,0 +1,12 @@
+{
+  "name": "rich-indentations",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-coffee": "~0.4.0",
+    "grunt-contrib-jade": "~0.4.0",
+    "grunt-contrib-stylus": "~0.4.0",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-reload": "~0.2.0"
+  }
+}
