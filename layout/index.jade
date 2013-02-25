@@ -2,10 +2,18 @@
 doctype 5
 html
   head
+    title Rich
     meta(charset="utf-8")
     link(rel="stylesheet",href="./page.css")
     //- script!= '__reloadServerUrl="ws://localhost:8001"'
-    //- script(src="http://localhost:6001/__reload/client.js")
+    //- script(src="http://localhost:8000/__reload/client.js")
     script(src="./main.js")
+    //- script(src="http://localhost:7777/doodle.js")
   body
-    p hello world
+    #note
+      p 两个功能
+      p 1. 高亮缩进线
+      p 2. 组合处理缩进
+    #paper
+      pre#code
+      textarea#text

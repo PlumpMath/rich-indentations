@@ -5,9 +5,14 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-stylus'
-  grunt.loadNpmTasks 'grunt-reload'
+  grunt.loadNpmTasks 'grunt-contrib-connect'
+  # grunt.loadNpmTasks 'grunt-reload'
 
   grunt.initConfig
+    connect:
+      server:
+        options:
+          port: 8000
     coffee:
       compile:
         files:
@@ -32,7 +37,6 @@ module.exports = (grunt) ->
     #   port: 6001
     #   proxy:
     #     host: "localhost"
-    #     port: 8000
     watch:
       coffee:
         files: "action/*.coffee"
@@ -47,6 +51,5 @@ module.exports = (grunt) ->
       #   files: "page/*"
       #   tasks: "reload"
 
-  grunt.registerTask "default", ["watch", "coffee", "jade", "stylus"]
-
-  grunt.registerTask "dev", ["watch"]
+  # grunt.registerTask "dev", ["reload", "watch"]
+  grunt.registerTask "dev", ["connect:server", "watch"]
